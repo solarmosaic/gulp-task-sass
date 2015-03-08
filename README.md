@@ -5,7 +5,7 @@ source map generation using [gulp-sourcemaps](https://github.com/floridoo/gulp-s
 
 ## Install
 
-`npm install --save mosaic-gulp-task-sass`
+`npm install --save-dev mosaic-gulp-task-sass`
 
 ## Usage
 
