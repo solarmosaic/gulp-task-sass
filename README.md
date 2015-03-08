@@ -9,8 +9,6 @@ source map generation using [gulp-sourcemaps](https://github.com/floridoo/gulp-s
 
 ## Usage
 
-To use this task in another repository, simply require it and pass it to `gulp.task` like so:
-
 ```javascript
 var gulp = require("gulp");
 var sass = require("mosaic-gulp-task-sass");
