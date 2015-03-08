@@ -5,7 +5,8 @@ var sourceMaps = require("gulp-sourcemaps");
 
 // Default options
 var defaults = {
-  precision: 10
+  // @see https://github.com/twbs/bootstrap-sass#sass-number-precision
+  precision: 8
 };
 
 /**
@@ -22,18 +23,22 @@ var defaults = {
 module.exports = function(options) {
   options = assign(defaults, options);
 
-  var enableSourceMaps = options.sourceMaps;
+  var sm = options.sourceMaps;
+  if (typeof sm !== "object") {
+    sm = {};
+  }
+
   // Don't pass this param through to gulp-sass
   delete options.sourceMaps;
 
-  // Compile the Sass
+  // Sass output stream
   var output = sass(options);
 
   return combine(
-    enableSourceMaps ? [
-      sourceMaps.init(enableSourceMaps.init || {}),
+    sm ? [
+      sourceMaps.init(sm.init),
       output,
-      sourceMaps.write.apply(sourceMaps.write, enableSourceMaps.write || {})
+      sourceMaps.write.apply(null, Array.isArray(sm.write) ? sm.write : [sm.write])
     ] : [
       output
     ]);
