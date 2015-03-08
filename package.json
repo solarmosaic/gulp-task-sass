@@ -1,0 +1,32 @@
+{
+  "name": "mosaic-gulp-task-sass",
+  "version": "1.0.0",
+  "description": "Gulp task that compiles Sass to CSS using gulp-sass with support for source maps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solarmosaic/gulp-task-sass"
+  },
+  "author": {
+    "name": "Solar Mosaic, Inc.",
+    "email": "support@solarmosaic.com",
+    "url": "http://solarmosaic.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solarmosaic/gulp-task-sass/issues"
+  },
+  "homepage": "https://github.com/solarmosaic/gulp-task-sass",
+  "dependencies": {
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.0",
+    "lodash.assign": "^3.0.0",
+    "stream-combiner": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
