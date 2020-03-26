@@ -27,6 +27,6 @@
     "stream-combiner": "^0.2.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^4.0.2"
   }
 }
